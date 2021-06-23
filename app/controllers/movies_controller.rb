@@ -29,7 +29,7 @@ def update
   movie.title = params[:title] || movie.title
   movie.year = params[:year] || movie.year
   movie.plot = params[:plot] || movie.plot
-  product.save
+  movie.save
   render json: product.as_json
 end   
 
