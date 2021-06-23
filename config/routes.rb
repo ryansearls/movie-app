@@ -7,14 +7,27 @@ Rails.application.routes.draw do
   # p responde.parse(:json)
 
 
- get "/first_actor", controller: "actors", action: "first_actor"
+ get "/all_movies", controller: "movies", action: "index"
 
- get "/first_movie", controller: "movies", action: "first_movie"
+ post "/first_movie", controller: "movies", action: "create"
 
- get "/second_movie", controller: "movies", action: "second_movie"
+ get "/movies/:id", controller: "movies", action: "show"
 
- get "/all_movies", controller: "movies", action: "all_movies"
+ patch "/movies/:id", controller: "movies", action: "update"
 
+ delete "/movies/:id", controller: "movies", action: "destroy"
+
+
+
+ get "/all_actors", controller: "actors", action: "index"
+
+ post "/first_actor", controller: "actors", action: "create"
+
+ get "/actors/:id", controller: "actors", action: "show"
+
+ patch "/actors/:id", controller: "actors", action: "update"
+
+ delete "/actors/:id", controller: "actors", action: "destroy"
 
 
 
