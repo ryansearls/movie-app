@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # p responde.parse(:json)
 
 
- get "/all_movies", controller: "movies", action: "index"
+ get "/movies", controller: "movies", action: "index"
 
- post "/first_movie", controller: "movies", action: "create"
+ post "/movies", controller: "movies", action: "create"
 
  get "/movies/:id", controller: "movies", action: "show"
 
@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
 
 
- get "/all_actors", controller: "actors", action: "index"
+ get "/actors", controller: "actors", action: "index"
 
- post "/first_actor", controller: "actors", action: "create"
+ post "/actors", controller: "actors", action: "create"
 
  get "/actors/:id", controller: "actors", action: "show"
 
