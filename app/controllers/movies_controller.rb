@@ -12,7 +12,7 @@ def create
     year: params[:year],
     plot: params[:plot])
 
-  product.save
+  movie.save
   render json: movie.as_json
 end 
 
@@ -30,7 +30,7 @@ def update
   movie.year = params[:year] || movie.year
   movie.plot = params[:plot] || movie.plot
   movie.save
-  render json: product.as_json
+  render json: movie.as_json
 end   
 
 
