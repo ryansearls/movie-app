@@ -4,6 +4,6 @@ class Actor < ApplicationRecord
   validates :known_for, presence: true
   validates :age, numericality: { only_integer: true, greater_than: 13 }
     
-  belongs_to :movie
-  
+  belongs_to :movie #returns hash of one single movie
+
 end
