@@ -18,15 +18,15 @@
 #   s unless Conor coaches Jimmy's corporately sponsored team.")
 
 
-  actor = Actor.create!(first_name: "Robin", last_name: "Williams", known_for: "Alan Parrish", gender: "M", age: 44 , movie_id: 1)
+  # actor = Actor.create!(first_name: "Robin", last_name: "Williams", known_for: "Alan Parrish", gender: "M", age: 44 , movie_id: 1)
 
-  actor = Actor.create!(first_name: "Kirsten", last_name: "Dunst", known_for: "Judy Shepherd", gender: "F", age: 14, movie_id: 1)
+  # actor = Actor.create!(first_name: "Kirsten", last_name: "Dunst", known_for: "Judy Shepherd", gender: "F", age: 14, movie_id: 1)
   
-  actor = Actor.create!(first_name: "Bebe", last_name: "Neuwirth", known_for: "Nora Shepherd", gender: "F", age: 37, movie_id: 1)
+  # actor = Actor.create!(first_name: "Bebe", last_name: "Neuwirth", known_for: "Nora Shepherd", gender: "F", age: 37, movie_id: 1)
   
   
   actor = Actor.create!(first_name: "Morgan", last_name: "Freeman", known_for: "Ellis Boyd Redding", gender: "M", age: 56, movie_id: 5)
   
-  actor = Actor.create!(first_name: "Tim", last_name: "Robbins", known_for: "Andy Dufresne", gender: "M", age: 36, movie_id: 18)
+  actor = Actor.create!(first_name: "Tim", last_name: "Robbins", known_for: "Andy Dufresne", gender: "M", age: 36, movie_id: 5)
   
   
