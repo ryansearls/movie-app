@@ -25,8 +25,26 @@
   # actor = Actor.create!(first_name: "Bebe", last_name: "Neuwirth", known_for: "Nora Shepherd", gender: "F", age: 37, movie_id: 1)
   
   
-  actor = Actor.create!(first_name: "Morgan", last_name: "Freeman", known_for: "Ellis Boyd Redding", gender: "M", age: 56, movie_id: 5)
+  # actor = Actor.create!(first_name: "Morgan", last_name: "Freeman", known_for: "Ellis Boyd Redding", gender: "M", age: 56, movie_id: 5)
   
-  actor = Actor.create!(first_name: "Tim", last_name: "Robbins", known_for: "Andy Dufresne", gender: "M", age: 36, movie_id: 5)
+  # actor = Actor.create!(first_name: "Tim", last_name: "Robbins", known_for: "Andy Dufresne", gender: "M", age: 36, movie_id: 5)
+
+  # Genre.create!(name: "Thriller")
+
+  # Genre.create!(name: "RomCom")
+
+  # Genre.create!(name: "Action")
+
+  MovieGenre.create!(movie_id: 1, genre_id: 3)
+
+  MovieGenre.create!(movie_id: 2, genre_id: 3)
+
+  MovieGenre.create!(movie_id: 5, genre_id: 1)
+
+
+
+
   
+
+
   
