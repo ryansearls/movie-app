@@ -35,11 +35,11 @@
 
   # Genre.create!(name: "Action")
 
-  MovieGenre.create!(movie_id: 1, genre_id: 3)
+  # MovieGenre.create!(movie_id: 1, genre_id: 3)
 
-  MovieGenre.create!(movie_id: 2, genre_id: 3)
+  # MovieGenre.create!(movie_id: 2, genre_id: 3)
 
-  MovieGenre.create!(movie_id: 5, genre_id: 1)
+  # MovieGenre.create!(movie_id: 5, genre_id: 1)
 
 
 
