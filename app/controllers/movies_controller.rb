@@ -1,15 +1,15 @@
 class MoviesController < ApplicationController
-  before_action :authenticate_admin, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show]
 
-def index
-  movie = Movie.all
-  render json: movie.as_json
-  Movie.where(english: true)
-end
+  def index
+    movie = Movie.all
+    render json: movie.as_json
+    Movie.where(english: true)
+  end
 
 
-def create
-  movie = Movie.new(
+  def create
+    movie = Movie.new(
     title: params[:title],
     year: params[:year],
     plot: params[:plot],
@@ -17,43 +17,42 @@ def create
     english: params[:english],
   )
 
-  if movie.save
+    if movie.save
     render json: {movie: movie.as_json}
-  else 
+    else 
     render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
-  end  
-end 
+    end  
+  end 
 
-def show
-  movie_id = params["id"]
-  movie = Movie.find(movie_id)
-  render json: movie.as_json
+  def show
+    movie_id = params["id"]
+    movie = Movie.find(movie_id)
+    render json: movie.as_json
 
-end 
+  end 
 
 
-def update
-  movie = Movie.find_by(id: params[:id])
-  movie.title = params[:title] || movie.title
-  movie.year = params[:year] || movie.year
-  movie.plot = params[:plot] || movie.plot
-  movie.director = params[:director] || movie.director
-  movie.english = params[:english] || movie.english
+  def update
+    movie = Movie.find_by(id: params[:id])
+    movie.title = params[:title] || movie.title
+    movie.year = params[:year] || movie.year
+    movie.plot = params[:plot] || movie.plot
+    movie.director = params[:director] || movie.director
+    movie.english = params[:english] || movie.english
   
-  if movie.save
-  render json: {movie: movie.as_json}
-  else
-    render jsonL {errors: movie.errors.full_messages},
-    status 418
-  end   
-end 
+    if movie.save
+      render json: {movie: movie.as_json}
+    else
+      render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
+    end   
+  end 
 
 
-def destroy
-  movie = Movie.find_by(id: params[:id])
-  movie.destroy
-  render json: {message: "Product is destroyed"}
-end 
+  def destroy
+    movie = Movie.find_by(id: params[:id])
+    movie.destroy
+    render json: {message: "Product is destroyed"}
+  end 
 
 
 end
